@@ -1,0 +1,35 @@
+﻿Base64 icon图片：
+    优势： - Base64图片可以减少请求
+           - 加快首屏数据的显示速度
+    缺点： - 维护不方便
+
+CSS3 icon图片：
+    缺点： - 不易维护
+           兼容性问题
+    常用属性：boroder-radius
+              box-shadow
+              transform
+
+
+手机端缩放问题：
+    由于手机端页面是可以被用户缩放的，为了避免因为缩放问题破坏用户体验。
+    使用viewport固定整个页面宽度
+    <meta name="viewport" content="width"=device-width,
+                          initial-scale=1.0,
+                          maximum-scale=1.0,
+                          user-scalable=no"/>
+
+移动端陷阱：
+    1.减少或避免repaint,reflow (页面重绘 页面回流)
+    2.尽量缓存所有可以缓存的数据
+    3.使用css3 transform 代替dom 元素操作 （animate.css动画库)
+    4.不要给非static定位元素增加css3动画，浏览器性能开销会增加
+    5.适当的使用硬件加速 (例如用canvas\transform)
+
+
+
+
+app待优化问题：
+   底部按钮区背景色没有随着fiction-container区改变
+   背景改变部分重复代码过多（事件代理）
+   
